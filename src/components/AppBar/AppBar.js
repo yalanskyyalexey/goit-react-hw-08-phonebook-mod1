@@ -27,6 +27,7 @@ const useStyles = makeStyles(theme => ({
 export default function Appbar() {
 	const isLoggedIn = useSelector(authSelectors.getIsAuthenticated);
 	const classes = useStyles();
+
 	return (
 		<div className={classes.root}>
 			<AppBar position='static'>

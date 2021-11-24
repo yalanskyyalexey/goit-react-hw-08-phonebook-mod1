@@ -1,14 +1,14 @@
 .link {
-	display: inline-block;
-	padding: 12px;
-	font-weight: 700;
-	font-size: 20px;
-	color: #ffff;
+  display: inline-block;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffff;
 }
 
 .activeLink {
-	color: #ffff;
+  color: #ffff;
 }
 .container {
-	margin-left: auto;
+  margin-left: auto;
 }

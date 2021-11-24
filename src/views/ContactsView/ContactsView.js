@@ -11,32 +11,32 @@ import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import Modal from '../../components/Modal/Modal';
 export default function ContactsView() {
-	const dispatch = useDispatch();
-	const [showModal, setShowModal] = useState(false);
-	useEffect(() => dispatch(contactsOperations.fetchContacts()), [dispatch]);
-	const toggleModal = () => {
-		setShowModal(!showModal);
-	};
-	return (
-		<Container className={s.wrapper} maxWidth='xs'>
-			<Typography className={s.title} color='primary' variant='h3'>
-				Contacts
-			</Typography>
-			<Filter />
-			<ContactList />
-			<IconButton
-				onClick={toggleModal}
-				className={s.add}
-				color='primary'
-				aria-label='add contact'
-			>
-				<AddIcon />
-			</IconButton>
-			{showModal && (
-				<Modal onClose={toggleModal}>
-					<ContactForm onClose={toggleModal} />
-				</Modal>
-			)}
-		</Container>
-	);
+  const dispatch = useDispatch();
+  const [showModal, setShowModal] = useState(false);
+  useEffect(() => dispatch(contactsOperations.fetchContacts()), [dispatch]);
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+  return (
+    <Container className={s.wrapper} maxWidth="xs">
+      <Typography className={s.title} color="primary" variant="h3">
+        Contacts
+      </Typography>
+      <Filter />
+      <ContactList />
+      <IconButton
+        onClick={toggleModal}
+        className={s.add}
+        color="primary"
+        aria-label="add contact"
+      >
+        <AddIcon />
+      </IconButton>
+      {showModal && (
+        <Modal onClose={toggleModal}>
+          <ContactForm onClose={toggleModal} />
+        </Modal>
+      )}
+    </Container>
+  );
 }

@@ -2,15 +2,12 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { contactsOperations, contactsSelectors } from '../../redux/contacts';
 import { toast } from 'react-toastify';
-// import NumberFormat from 'react-number-format';
 import Button from '@material-ui/core/Button';
-// import LoaderComponent from '../LoaderComponent';
 import s from './ContactForm.module.css';
 import TextField from '@material-ui/core/TextField';
 function ContactForm({ onClose }) {
 	const dispatch = useDispatch();
 	const contacts = useSelector(contactsSelectors.getContacts);
-	// const isLoading = useSelector(contactsSelectors.getLoading);
 	const [name, setName] = useState('');
 	const [number, setNumber] = useState('');
 
